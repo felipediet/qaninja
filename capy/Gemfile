@@ -1,0 +1,9 @@
+source 'https://rubygems.org'
+
+gem 'capybara'
+gem 'selenium-webdriver'
+gem 'rspec'
+gem 'ffi'
+gem 'solargraph', group: :development
+# gem 'pry'
+# gem 'byebug'

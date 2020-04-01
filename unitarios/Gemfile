@@ -1,0 +1,16 @@
+# bundel init dentro da unitarios
+# rspec --init
+
+source "https://rubygems.org"
+
+gem 'cucumber'
+gem 'rspec'
+gem 'rspec_junit_formatter' 
+
+
+
+# DOC HTML
+# rspec spec --format html -o report.html
+
+# Doc formato JNUIT
+# >rspec --format RspecJunitFormatter --out report.xml
