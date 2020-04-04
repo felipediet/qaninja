@@ -32,3 +32,15 @@
             within_frame('iframeruim')  do )
 
             end
+
+
+# Utilizar quando Ids Dinâmicos
+
+        # Procura um input onde o ID que termina com
+            find('input[id$=UsernameInput]').set 'diet'
+            
+        # Procura um input onde o ID que começa com
+            find('input[id^=UsernameInput]').set '123456'
+            
+        # Procura um a onde o ID que contem
+            find('a[id*=GetStartedButton]').click
