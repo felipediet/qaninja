@@ -7,7 +7,7 @@ describe 'Alertas de JS', :alerts do
     it 'alerta' do
         click_button "Alerta"
 
-        msg = page.driver.browser.switch_to.alert.text
+        msg = page.driver.browser.switch_to.alert.text  # Pega o texto da mensagem JS
         expect(msg).to eql 'Isto é uma mensagem de alerta'               
     end
 
@@ -52,6 +52,7 @@ describe 'Alertas de JS', :alerts do
 
         nome.each do |n|
             prompt(n)
+            sleep 3
         end
     end
 
