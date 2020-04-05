@@ -1,6 +1,8 @@
 
 # URL padrão
 
+    # dentro do spec_helper, dentro da escopo Capybara
+
     Capybara.configure do |config|
         config.default_driver = :selenium_chrome
     # tempo padrão que o sistema aguarda entre as execuções
@@ -9,6 +11,14 @@
         config.app_host = 'https://training-wheels-protocol.herokuapp.com' 
     end
 
+
+# configurar resolução padrão 
+    
+    # dentro do spec_helper, dentro da escopo RSPEC
+
+    config.before(:example) do
+        page.current_window.resize_to(1280, 800)
+    end
 
 
 # Manipular IFRAME como adicionar um ID usando a classe do mesmo
