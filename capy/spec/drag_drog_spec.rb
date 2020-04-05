@@ -1,8 +1,8 @@
 describe 'Mouse Hover', :drop do
 
     before(:each) do
-        # visit 'https://training-wheels-protocol.herokuapp.com/dynamic_controls'
-        visit 'https://training-wheels-protocol.herokuapp.com/'
+        # visit '/dynamic_controls'
+        visit '/'
         find('li', text: 'Drag and Drop').click_link
     end
 

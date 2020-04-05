@@ -1,8 +1,8 @@
 describe 'Mouse Hover', :hovers do
 
     before(:each) do
-        # visit 'https://training-wheels-protocol.herokuapp.com/dynamic_controls'
-        visit 'https://training-wheels-protocol.herokuapp.com/'
+        # visit '/dynamic_controls'
+        visit '/'
         find('li', text: 'Hovers').click_link
     end
 

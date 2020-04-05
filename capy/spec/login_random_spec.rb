@@ -1,7 +1,7 @@
 describe 'Login random', :login2 do
 
     before(:each) do
-        visit 'https://training-wheels-protocol.herokuapp.com/login2'
+        visit '/login2'
     end
 
     it 'login com data de nascimento' do
@@ -33,7 +33,7 @@ describe 'Login random', :login2 do
     end
 
     # it 'senha incorreta' do
-    #     visit 'https://training-wheels-protocol.herokuapp.com/login'
+    #     visit '/login'
 
     #     fill_in 'userId', with: 'stark' # ID
     #     fill_in 'password', with: 'jarvis@' # NAME
@@ -47,7 +47,7 @@ describe 'Login random', :login2 do
 
     # it 'usuário não cadastrado' do
         
-    #     visit 'https://training-wheels-protocol.herokuapp.com/login'
+    #     visit '/login'
 
     #     fill_in 'userId', with: 'thor' # ID
     #     fill_in 'password', with: 'mjolnir' # NAME

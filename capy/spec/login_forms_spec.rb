@@ -1,8 +1,8 @@
-describe 'forms' do
+describe 'forms', :smoke do
 
     it 'login com sucesso' do
 
-        visit 'https://training-wheels-protocol.herokuapp.com/login'
+        visit '/login'
 
         fill_in 'userId', with: 'stark' # ID
         fill_in 'password', with: 'jarvis!' # NAME
@@ -20,7 +20,7 @@ describe 'forms' do
     end
 
     it 'senha incorreta' do
-        visit 'https://training-wheels-protocol.herokuapp.com/login'
+        visit '/login'
 
         fill_in 'userId', with: 'stark' # ID
         fill_in 'password', with: 'jarvis@' # NAME
@@ -34,7 +34,7 @@ describe 'forms' do
 
     it 'usuário não cadastrado' do
         
-        visit 'https://training-wheels-protocol.herokuapp.com/login'
+        visit '/login'
 
         fill_in 'userId', with: 'thor' # ID
         fill_in 'password', with: 'mjolnir' # NAME

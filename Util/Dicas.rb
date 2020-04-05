@@ -1,4 +1,16 @@
 
+# URL padrão
+
+    Capybara.configure do |config|
+        config.default_driver = :selenium_chrome
+    # tempo padrão que o sistema aguarda entre as execuções
+        config.default_max_wait_time = 5 
+    # URL padrão da aplicação, no before usar apenas o /página
+        config.app_host = 'https://training-wheels-protocol.herokuapp.com' 
+    end
+
+
+
 # Manipular IFRAME como adicionar um ID usando a classe do mesmo
 
 # Pelo console
