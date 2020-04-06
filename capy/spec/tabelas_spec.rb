@@ -38,7 +38,7 @@ describe 'Tabelas', :tabs, :smoke do
         movie = diesel.all('td')[2].text
                 
             #Verifica se na coluna que pedi acima é igual a Velozes e Furiosos
-        expect(movie).to eql 'Velozes e Furiosos'
+        expect(movie).to eql 'Fast And Furious'
 
     end
 

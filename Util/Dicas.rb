@@ -1,4 +1,22 @@
 
+
+# Relatório com evidências
+    # Para rodar excutar o comando abaixo:
+
+    #cucumber --format html --out=relatorio.html -t @TAG
+
+    # O comando abaixo tira as evidenccias dos testes...manter a penultima linha comentado para não apagar as evidencias
+        AfterStep do |scenario|
+        screenshot = "#{SecureRandom.urlsafe_base64(6)}.png"
+        page.save_screenshot(screenshot)
+        embed(screenshot, "image/png", "Step Result")
+        # FileUtils.rm_rf(screenshot)
+        end
+
+
+
+
+
 # URL padrão
 
     # dentro do spec_helper, dentro da escopo Capybara
@@ -18,6 +36,13 @@
 
     config.before(:example) do
         page.current_window.resize_to(1280, 800)
+    end
+
+
+# tira evidência no final do teste
+    config.after(:example) do |e|
+        nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
+        page.save_screenshot('log/' + 'Erro_cenario_' + nome + '.png') if e.exception
     end
 
 

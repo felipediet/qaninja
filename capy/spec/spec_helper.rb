@@ -2,7 +2,6 @@
 require "capybara"
 require "capybara/rspec"
 require 'selenium-webdriver'
-require 'spec_helper'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -17,10 +16,17 @@ RSpec.configure do |config|
 
   config.include Capybara::DSL
 
-  config.before(:example) do
-    page.current_window.resize_to(1280, 800)
-  end
+  # # Manipula resolução
+  # config.before(:example) do
+  #   page.current_window.resize_to(1280, 800)
+  # end
   
+  
+# tira evidência no final do teste
+  config.after(:example) do |e|
+    nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
+    page.save_screenshot('log/' + 'Erro_cenario_' + nome + '.png') if e.exception
+  end
 
 end
 

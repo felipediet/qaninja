@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe 'Select2' do
+describe 'Select2', :select2 do
 
     describe('single', :single) do
             before(:each) do
@@ -23,7 +21,7 @@ describe 'Select2' do
     describe('multiple', :multi) do
         before(:each) do
                 visit '/apps/select2/multi.html'
-            end
+        end
 
             def seleciona(ator)
                 find('.select2-selection--multiple').click

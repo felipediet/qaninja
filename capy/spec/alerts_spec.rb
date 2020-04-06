@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe 'Alertas de JS', :alerts do
     
     before(:each) do
